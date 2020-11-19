@@ -1,5 +1,7 @@
 import org.joda.time.DateTime;
 
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String args[]) {
@@ -30,49 +32,31 @@ public class Main {
         CourseProgramme c2 = new CourseProgramme("Greendale", new DateTime("2020-09-01"), new DateTime("2021-06-01"));
 
         //Add Students to Modules
-        m1.addStudent(s1);
-        m1.addStudent(s2);
-        m1.addStudent(s3);
-        m1.addStudent(s4);
-        m1.addStudent(s5);
-        m2.addStudent(s1);
-        m2.addStudent(s2);
-        m2.addStudent(s3);
-        m2.addStudent(s4);
-        m2.addStudent(s5);
-        m3.addStudent(s1);
-        m3.addStudent(s2);
-        m3.addStudent(s3);
-        m3.addStudent(s4);
-        m3.addStudent(s5);
-        m4.addStudent(s6);
-        m4.addStudent(s7);
-        m4.addStudent(s8);
-        m4.addStudent(s9);
-        m4.addStudent(s10);
-        m4.addStudent(s11);
-        m4.addStudent(s12);
-        m5.addStudent(s6);
-        m5.addStudent(s7);
-        m5.addStudent(s8);
-        m5.addStudent(s9);
-        m5.addStudent(s10);
-        m5.addStudent(s11);
-        m5.addStudent(s12);
-        m6.addStudent(s6);
-        m6.addStudent(s7);
-        m6.addStudent(s8);
-        m6.addStudent(s9);
-        m6.addStudent(s10);
-        m6.addStudent(s11);
-        m6.addStudent(s12);
+        for (Student student : Arrays.asList(s1, s2, s3, s4, s5)) {
+            m1.addStudent(student);
+        }
+        for (Student student : Arrays.asList(s1, s2, s3, s4, s5)) {
+            m2.addStudent(student);
+        }
+        for (Student student : Arrays.asList(s1, s2, s3, s4, s5)) {
+            m3.addStudent(student);
+        }
+        for (Student student : Arrays.asList(s6, s7, s8, s9, s10, s11, s12)) {
+            m4.addStudent(student);
+        }
+        for (Student student : Arrays.asList(s6, s7, s8, s9, s10, s11, s12)) {
+            m5.addStudent(student);
+        }
+        for (Student student : Arrays.asList(s6, s7, s8, s9, s10, s11, s12)) {
+            m6.addStudent(student);
+        }
 
         //Add Modules to Course Programme
-        c1.addModule(m1);
-        c1.addModule(m2);
-        c1.addModule(m3);
-        c2.addModule(m4);
-        c2.addModule(m5);
-        c2.addModule(m6);
+        for (Module module : Arrays.asList(m1, m2, m3)) {
+            c1.addModule(module);
+        }
+        for (Module module : Arrays.asList(m4, m5, m6)) {
+            c2.addModule(module);
+        }
     }
 }
