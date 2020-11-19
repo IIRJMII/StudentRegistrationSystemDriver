@@ -3,6 +3,7 @@ import org.joda.time.DateTime;
 public class Main {
 
     public static void main(String args[]) {
+        //Create Students
         Student s1 = new Student("Elliott", new DateTime("1997-01-27"), 19384753);
         Student s2 = new Student("Angela", new DateTime("1996-08-11"), 19482057);
         Student s3 = new Student("Darlene", new DateTime("1999-04-05"), 17502857);
@@ -16,6 +17,7 @@ public class Main {
         Student s11 = new Student("Shirley", new DateTime("1975-09-13"), 18495837);
         Student s12 = new Student("Annie", new DateTime("1995-09-29"), 18578274);
 
+        //Create Modules
         Module m1 = new Module("Software Engineering");
         Module m2 = new Module("Machine Learning");
         Module m3 = new Module("Information Retrieval");
@@ -23,7 +25,54 @@ public class Main {
         Module m5 = new Module("Anthropology");
         Module m6 = new Module("Biology");
 
+        //Create Course Programmes
         CourseProgramme c1 = new CourseProgramme("GY350", new DateTime("2020-09-01"), new DateTime("2021-06-01"));
         CourseProgramme c2 = new CourseProgramme("Greendale", new DateTime("2020-09-01"), new DateTime("2021-06-01"));
+
+        //Add Students to Modules
+        m1.addStudent(s1);
+        m1.addStudent(s2);
+        m1.addStudent(s3);
+        m1.addStudent(s4);
+        m1.addStudent(s5);
+        m2.addStudent(s1);
+        m2.addStudent(s2);
+        m2.addStudent(s3);
+        m2.addStudent(s4);
+        m2.addStudent(s5);
+        m3.addStudent(s1);
+        m3.addStudent(s2);
+        m3.addStudent(s3);
+        m3.addStudent(s4);
+        m3.addStudent(s5);
+        m4.addStudent(s6);
+        m4.addStudent(s7);
+        m4.addStudent(s8);
+        m4.addStudent(s9);
+        m4.addStudent(s10);
+        m4.addStudent(s11);
+        m4.addStudent(s12);
+        m5.addStudent(s6);
+        m5.addStudent(s7);
+        m5.addStudent(s8);
+        m5.addStudent(s9);
+        m5.addStudent(s10);
+        m5.addStudent(s11);
+        m5.addStudent(s12);
+        m6.addStudent(s6);
+        m6.addStudent(s7);
+        m6.addStudent(s8);
+        m6.addStudent(s9);
+        m6.addStudent(s10);
+        m6.addStudent(s11);
+        m6.addStudent(s12);
+
+        //Add Modules to Course Programme
+        c1.addModule(m1);
+        c1.addModule(m2);
+        c1.addModule(m3);
+        c2.addModule(m4);
+        c2.addModule(m5);
+        c2.addModule(m6);
     }
 }
